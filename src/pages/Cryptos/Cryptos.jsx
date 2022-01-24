@@ -6,6 +6,12 @@ import { useGetCryptosQuery } from '../../services/cryptoApi';
 const { Header, Content} = Layout;
 
 function Home() {
+
+  const { data: cryptosList, isFetching } = useGetCryptosQuery(10);
+
+  if (isFetching) return ('loading..')
+  console.log(cryptosList); 
+
   return (
     <div className='home'>
     <Header className="site-layout-sub-header-background" style={{ padding: 0 }} />

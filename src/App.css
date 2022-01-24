@@ -1,33 +1,61 @@
-.sider{
-    height: 100vh;
+.sider {
+  height: 100vh;
 }
 
 .logo {
-    height: 32px;
-    margin: 16px;
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-
-  .site-layout-sub-header-background {
-    background: #fff;
-  }
-  
-  .site-layout-background {
-    background: #fff;
-  }
-    [data-theme="dark"] .site-layout-sub-header-background {
-      background: #141414;
-    }
-
-.ant-layout-sider{
-    height: 100vh !important;
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-h1{
-    color: #fff !important;
+[data-theme="dark"] .site-layout-sub-header-background {
+  background: #141414;
 }
 
-.headerTitle{
-    padding: 5px;
+.ant-layout-sider {
+  height: 100vh !important;
+}
+
+.news-image {
+  padding-right:20px;
+  border-radius: 15%;
+  align-self: center;
+}
+h1 {
+  color: #fff !important;
+}
+
+.headerTitle {
+  padding: 5px;
+}
+
+.provider-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.news-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.provider-name {
+  padding-left: 20px;
+}
+
+.news-container{
+  width: 500px;
+  background-color: #ffffff;
+  padding-right: 30px;
+  border-radius: 15px;
+}
+
+.statsCards-container{
+  margin-top: 50px;
+}
+
+.mini-titles{
+  font-size: 17px !important;
+  color: rgb(0 21 41 / 75%) !important;
 }
