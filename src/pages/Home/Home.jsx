@@ -2,7 +2,7 @@ import React from "react";
 import { Layout, Typography, Row, Col } from "antd";
 import { useGetNewsQuery } from "../../services/newsApi";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
-import { CarouselComp, StatsCards } from "../../components";
+import { CarouselComp, StatsCards, TopFiveCryptos } from "../../components";
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
@@ -34,12 +34,16 @@ function Home() {
             </Col>
           </Row>
           <Row gutter={16}>
-            <Col  xs={24} s={24} lg={4}>
+            <Col xs={24} s={24} lg={4}>
               <StatsCards
                 totalCoins={cryptosData?.data?.stats?.totalCoins}
                 totalMarketCap={cryptosData?.data?.stats?.totalMarketCap}
                 total24hVolume={cryptosData?.data?.stats?.total24hVolume}
               ></StatsCards>
+            </Col>
+
+            <Col xs={24} s={24} lg={20}>
+              <TopFiveCryptos topFive={(cryptosData?.data?.coins).slice(0, 5)}></TopFiveCryptos>
             </Col>
           </Row>
 

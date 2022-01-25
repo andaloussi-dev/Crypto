@@ -17,7 +17,7 @@ function StatsCards({ totalCoins, totalMarketCap, total24hVolume }) {
             </Title>
             <Row gutter={16}>
                 <Col span={24}>
-                    <Card>
+                    <Card className="statsCard">
                         <Statistic
                             title="Total Coins"
                             value={millify(totalCoins)}
@@ -27,7 +27,7 @@ function StatsCards({ totalCoins, totalMarketCap, total24hVolume }) {
                     </Card>
                 </Col>
                 <Col span={24}>
-                    <Card>
+                    <Card className="statsCard">
                         <Statistic
                             title="Total Market Cap"
                             value={millify(totalMarketCap)}
@@ -39,7 +39,7 @@ function StatsCards({ totalCoins, totalMarketCap, total24hVolume }) {
                 </Col>
 
                 <Col span={24}>
-                    <Card>
+                    <Card className="statsCard">
                         <Statistic
                             title="Total 24 Volume"
                             value={millify(total24hVolume)}
