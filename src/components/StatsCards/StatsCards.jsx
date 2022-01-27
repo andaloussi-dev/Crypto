@@ -9,41 +9,40 @@ import millify from "millify";
 const { Title } = Typography;
 
 function StatsCards({ totalCoins, totalMarketCap, total24hVolume }) {
-    console.log(totalMarketCap);
     return (
         <div className="statsCards-container">
             <Title className="mini-titles" level={3}>
                 The global crypto market cap{" "}
             </Title>
             <Row gutter={16}>
-                <Col span={24}>
+                <Col lg={8} s={24} xs={24} md={24}>
                     <Card className="statsCard">
                         <Statistic
                             title="Total Coins"
                             value={millify(totalCoins)}
-                            valueStyle={{ color: "#3f8600" }}
+                            valueStyle={{ color: "#ffff" }}
                             prefix={<DollarCircleOutlined />}
                         />
                     </Card>
                 </Col>
-                <Col span={24}>
+                <Col lg={8} s={24} xs={24} md={24}>
                     <Card className="statsCard">
                         <Statistic
                             title="Total Market Cap"
                             value={millify(totalMarketCap)}
-                            valueStyle={{ color: "#cf1322" }}
+                            valueStyle={{ color: "#ffff" }}
                             prefix={<UpCircleOutlined />}
                             suffix="$"
                         />
                     </Card>
                 </Col>
 
-                <Col span={24}>
+                <Col lg={8} s={24} xs={24} md={24}>
                     <Card className="statsCard">
                         <Statistic
                             title="Total 24 Volume"
                             value={millify(total24hVolume)}
-                            valueStyle={{ color: "#cf1322" }}
+                            valueStyle={{ color: "#ffff" }}
                             prefix={<FieldTimeOutlined />}
                             suffix="$"
                         />

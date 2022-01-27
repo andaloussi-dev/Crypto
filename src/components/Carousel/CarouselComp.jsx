@@ -67,7 +67,7 @@ function CarouselComp({ news }) {
             ]
           }
         }}
-        animationSpeed={1500}
+        animationSpeed={3000}
 
       >
         {news.map((item, i) => (
@@ -81,7 +81,7 @@ function CarouselComp({ news }) {
                     <Avatar src={item.provider[0]?.image?.thumbnail?.contentUrl || demoImage} alt="" />
                     <Text className="provider-name">{item.provider[0]?.name}</Text>
                   </div>
-                  <Text>{moment(item.datePublished).startOf('ss').fromNow()}</Text>
+                  <Text className="provider-name">{moment(item.datePublished).startOf('ss').fromNow()}</Text>
                 </div>
               </div>
             </div>
